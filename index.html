@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short, thoughtful workflow quiz to help you find one practical way to make work feel easier.">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>Find Your Workflow Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="min-h-screen bg-cream-50 font-sans text-forest-950 antialiased">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -right-28 -top-36 h-96 w-96 rounded-full bg-amber-100/60 blur-3xl"></div>
+    <div class="absolute -bottom-48 -left-32 h-96 w-96 rounded-full bg-emerald-100/50 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-8 sm:py-8">
+    <header class="flex items-center justify-between">
+      <a class="inline-flex items-center gap-3 rounded-lg text-sm font-semibold tracking-tight text-forest-950 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest-700" href="./" aria-label="Workflow Notes home">
+        <span class="grid h-10 w-10 place-items-center rounded-2xl bg-forest-950 text-cream-50" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M5 7.5 8.5 11 15 4.5M5 16.5l3.5 3.5L20 8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span>Workflow Notes</span>
+      </a>
+      <span class="rounded-full border border-forest-950/10 bg-white/70 px-3 py-1.5 text-xs font-medium text-forest-700">A quick, free quiz</span>
+    </header>
+
+    <main class="flex flex-1 items-center justify-center py-10 sm:py-14">
+      <section id="step-intro" class="w-full max-w-3xl" aria-labelledby="intro-title">
+        <div class="overflow-hidden rounded-[2rem] border border-forest-950/10 bg-white shadow-card">
+          <div class="grid md:grid-cols-[1.12fr_0.88fr]">
+            <div class="flex flex-col items-start gap-6 p-7 sm:p-10 lg:p-12">
+              <p class="inline-flex items-center gap-2 rounded-full bg-sage-100 px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-forest-700">
+                <span class="h-1.5 w-1.5 rounded-full bg-coral-500"></span>
+                A little more breathing room
+              </p>
+              <div class="space-y-4">
+                <h1 id="intro-title" tabindex="-1" class="font-display text-4xl font-semibold leading-[1.08] tracking-tight text-forest-950 sm:text-5xl">Find a workflow that feels more like <span class="text-coral-600">you.</span></h1>
+                <p class="max-w-xl text-base leading-7 text-ink-600 sm:text-lg">A few quick questions can help you spot what’s getting in your way—and choose one small improvement to try next.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-500">
+                <span class="inline-flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded-full bg-sage-100 text-xs font-bold text-forest-700">3</span>questions</span>
+                <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-forest-700" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="7.5"></circle><path d="M10 6v4l2.5 1.5" stroke-linecap="round"></path></svg>about 1 minute</span>
+              </div>
+              <button id="start" type="button" class="group inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-forest-950 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">
+                Let’s get started
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h12m-5-5 5 5-5 5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </button>
+              <p class="text-xs leading-5 text-ink-500">No perfect answers here—just a useful place to begin.</p>
+            </div>
+            <div class="relative hidden min-h-[28rem] flex-col justify-between overflow-hidden bg-sage-100 p-8 md:flex lg:p-10">
+              <div class="absolute -right-12 top-10 h-48 w-48 rounded-full border border-forest-700/10"></div>
+              <div class="absolute -right-3 top-20 h-32 w-32 rounded-full border border-forest-700/15"></div>
+              <div class="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-coral-300/40 blur-2xl"></div>
+              <div class="relative flex items-center justify-between">
+                <span class="text-xs font-semibold uppercase tracking-[0.14em] text-forest-700">A gentle reset</span>
+                <span class="grid h-10 w-10 place-items-center rounded-full bg-white/75 text-coral-600" aria-hidden="true">✳</span>
+              </div>
+              <div class="relative space-y-3">
+                <p class="font-display text-3xl font-medium leading-tight text-forest-950">Small changes.<br>Less mental clutter.</p>
+                <p class="max-w-xs text-sm leading-6 text-ink-600">Get a simple snapshot based on what you tell us—not a one-size-fits-all checklist.</p>
+              </div>
+              <div class="relative flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-coral-100 text-coral-700" aria-hidden="true">
+                  <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 10 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </span>
+                <span><span class="block text-sm font-semibold text-forest-950">One practical next step</span><span class="mt-0.5 block text-xs text-ink-500">Picked to fit your answers</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mx-auto mt-5 max-w-xl text-center text-xs leading-5 text-ink-500">This sample quiz is here to help you think through your workflow. Your answers are not saved or shared unless you choose to continue to Google Forms.</p>
+      </section>
+
+      <section id="step-quiz" class="hidden w-full max-w-2xl" aria-labelledby="question-title" aria-live="polite">
+        <div class="mb-5 flex items-center justify-between gap-4">
+          <a href="./" id="quiz-brand" class="inline-flex items-center gap-2 text-sm font-semibold text-forest-950 no-underline">
+            <span class="grid h-8 w-8 place-items-center rounded-xl bg-forest-950 text-white" aria-hidden="true">✓</span>Workflow Notes
+          </a>
+          <span class="text-xs font-medium text-ink-500">Your answers stay on this page</span>
+        </div>
+        <div class="rounded-[2rem] border border-forest-950/10 bg-white p-6 shadow-card sm:p-10">
+          <div class="mb-8 space-y-4">
+            <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.12em] text-ink-500">
+              <span id="question-count">Question 1 of 3</span>
+              <span id="question-kind">Choose any that fit</span>
+            </div>
+            <div id="progress-track" class="h-1.5 overflow-hidden rounded-full bg-sage-100" role="progressbar" aria-label="Quiz progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+              <div id="progress-fill" class="h-full rounded-full bg-coral-500 transition-all duration-300" style="width: 33.333%"></div>
+            </div>
+          </div>
+          <fieldset class="min-w-0 border-0 p-0">
+            <legend id="question-title" tabindex="-1" class="mb-2 font-display text-2xl font-semibold leading-tight tracking-tight text-forest-950 sm:text-3xl"></legend>
+            <p id="question-hint" class="mb-6 text-sm leading-6 text-ink-500"></p>
+            <div id="options" class="grid gap-3"></div>
+          </fieldset>
+          <p id="question-error" class="mt-4 min-h-5 text-sm text-red-700" role="alert"></p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <button id="back" type="button" class="min-h-11 rounded-xl border border-forest-950/15 px-5 py-2.5 text-sm font-semibold text-forest-950 transition hover:bg-cream-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">Back</button>
+            <button id="next" type="button" class="inline-flex min-h-11 items-center gap-2 rounded-xl bg-forest-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">
+              <span>Next question</span>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h12m-5-5 5 5-5 5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="step-contact" class="hidden w-full max-w-xl" aria-labelledby="contact-title">
+        <div class="rounded-[2rem] border border-forest-950/10 bg-white p-6 shadow-card sm:p-10">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.13em] text-coral-700">Just one more thing</p>
+          <h2 id="contact-title" tabindex="-1" class="font-display text-3xl font-semibold tracking-tight text-forest-950 sm:text-4xl">Let’s make this result yours.</h2>
+          <p class="mt-3 text-sm leading-6 text-ink-600">Add your details to include them with your responses in Google Forms. Your snapshot will appear here first, and you can review the form before submitting.</p>
+          <form id="contact-form" class="mt-7 space-y-5" novalidate>
+            <details class="rounded-2xl border border-forest-950/10 bg-cream-50 px-4 py-3">
+              <summary class="cursor-pointer text-sm font-semibold text-forest-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">Read the Privacy Notice</summary>
+              <div class="mt-3 space-y-3 border-t border-forest-950/10 pt-3 text-sm leading-6 text-ink-600">
+                <p>Before proceeding, please read this privacy notice carefully.</p>
+                <p>This sample quiz collects your answers, name, and email address to demonstrate a workflow assessment and opt-in form. Your information should only be used for the purposes explained in this form and handled responsibly.</p>
+                <p>By continuing, you acknowledge that you have read this notice and understand how your information will be used. You may choose not to proceed if you do not agree.</p>
+              </div>
+            </details>
+            <div>
+              <label for="name" class="mb-1.5 block text-sm font-semibold text-forest-950">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required class="min-h-12 w-full rounded-xl border border-forest-950/15 bg-cream-50 px-4 py-3 text-base text-forest-950 placeholder:text-ink-400 focus:border-forest-700 focus:outline-none focus:ring-2 focus:ring-forest-700/15" placeholder="Your name">
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-semibold text-forest-950">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required class="min-h-12 w-full rounded-xl border border-forest-950/15 bg-cream-50 px-4 py-3 text-base text-forest-950 placeholder:text-ink-400 focus:border-forest-700 focus:outline-none focus:ring-2 focus:ring-forest-700/15" placeholder="you@example.com">
+            </div>
+            <label for="consent" class="flex cursor-pointer items-start gap-3 rounded-2xl bg-sage-100/70 p-4 text-sm leading-6 text-ink-600">
+              <input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 shrink-0 accent-forest-700">
+              <span>I have read and agree to the Privacy Notice above, and understand that submitting the Google Form allows follow-up by email about my quiz responses and related workflow tips.</span>
+            </label>
+            <p id="contact-error" class="min-h-5 text-sm text-red-700" role="alert"></p>
+            <div class="flex items-center justify-between gap-3">
+              <button id="contact-back" type="button" class="min-h-11 rounded-xl border border-forest-950/15 px-5 py-2.5 text-sm font-semibold text-forest-950 transition hover:bg-cream-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">Back</button>
+              <button type="submit" class="min-h-11 rounded-xl bg-forest-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">Show my result</button>
+            </div>
+          </form>
+          <p class="mt-5 text-xs leading-5 text-ink-500">Your details and answers stay in your browser until you choose to continue. Continuing opens Google Forms with your answers prefilled; Google receives them when that page opens, and nothing is submitted until you press Submit there.</p>
+        </div>
+      </section>
+
+      <section id="step-result" class="hidden w-full max-w-2xl" aria-labelledby="result-title" aria-live="polite">
+        <div class="rounded-[2rem] border border-forest-950/10 bg-white p-6 shadow-card sm:p-10">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.13em] text-coral-700"><span id="result-name"></span><span id="result-kicker">Your workflow snapshot</span></p>
+          <h2 id="result-title" tabindex="-1" class="font-display text-3xl font-semibold leading-tight tracking-tight text-forest-950 sm:text-4xl"></h2>
+          <p id="result-body" class="mt-4 text-base leading-7 text-ink-600"></p>
+          <div class="mt-7 rounded-2xl bg-sage-100/75 p-5 sm:p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-forest-700">A small step to try</p>
+            <p id="result-step" class="mt-2 text-base font-medium leading-7 text-forest-950"></p>
+          </div>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-forest-950/10 p-4">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-ink-500">What feels tricky</p>
+              <p id="result-challenge" class="mt-1.5 text-sm font-medium leading-6 text-forest-950"></p>
+            </div>
+            <div class="rounded-2xl border border-forest-950/10 p-4">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-ink-500">Your next focus</p>
+              <p id="result-priority" class="mt-1.5 text-sm font-medium leading-6 text-forest-950"></p>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <button id="retake" type="button" class="min-h-11 rounded-xl border border-forest-950/15 px-5 py-2.5 text-sm font-semibold text-forest-950 transition hover:bg-cream-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">Start again</button>
+            <a id="google-form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdZyMhwQsqIm8_fwECwuG-csJuJkfByrsOtaBx6YRQI1VnHjA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-forest-950 px-5 py-3 text-center text-sm font-semibold text-white no-underline transition hover:bg-forest-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700">
+              Continue to Google Forms
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h9v9M16 4 8 12M13 11v5H4V7h5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
+          <p class="mt-4 text-center text-xs leading-5 text-ink-500">Your form answers will be prefilled for convenience. Please review them and press Submit in Google Forms if you want to send them.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-col items-center justify-between gap-2 border-t border-forest-950/10 pt-5 text-xs text-ink-500 sm:flex-row">
+      <span>Made to make the next step feel manageable.</span>
+      <a class="font-medium text-forest-700 underline decoration-forest-700/30 underline-offset-4 hover:decoration-forest-700" href="https://docs.google.com/forms/d/e/1FAIpQLSdZyMhwQsqIm8_fwECwuG-csJuJkfByrsOtaBx6YRQI1VnHjA/viewform" target="_blank" rel="noopener noreferrer">Open the original Google Form</a>
+    </footer>
+  </div>
+
+  <script>
+    "use strict";
+
+    const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdZyMhwQsqIm8_fwECwuG-csJuJkfByrsOtaBx6YRQI1VnHjA/viewform";
+    const FORM_FIELDS = {
+      privacyConsent: "entry.645143383",
+      challenge: "entry.353829675",
+      organization: "entry.822392516",
+      improvement: "entry.248512603",
+      fullName: "entry.1544677950",
+      email: "entry.63592911"
+    };
+    const QUESTIONS = [
+      {
+        id: "challenge",
+        title: "What is your biggest workflow challenge?",
+        hint: "Choose any that fit. It’s okay if there’s more than one.",
+        kind: "checkbox",
+        options: ["Managing too many tasks", "Staying organized", "Repetitive manual work", "Following up with clients", "All of the Above"],
+        other: true
+      },
+      {
+        id: "organization",
+        title: "How do you currently organize your tasks?",
+        hint: "Choose the option that feels closest to your day-to-day.",
+        kind: "radio",
+        options: ["To-do lists or notes", "Google Sheets or spreadsheets", "Project management tools", "I don't have a consistent system"],
+        other: true
+      },
+      {
+        id: "improvement",
+        title: "Which improvement would help you most?",
+        hint: "Go with the one that would make the biggest difference right now.",
+        kind: "radio",
+        options: ["Automating repetitive tasks", "Improving time management", "Organizing client information", "Creating a better follow-up system"],
+        other: true
+      }
+    ];
+    const RESULTS = {
+      "Automating repetitive tasks": {
+        title: "The Flow Simplifier",
+        body: "You’re ready to spend less time on repeat work and more time on the parts that need your attention. A small, well-chosen automation can take a surprising amount off your plate.",
+        step: "Pick one task you repeat every week. Write down the steps it takes, then look for the one handoff or reminder you could automate first."
+      },
+      "Improving time management": {
+        title: "The Priority Setter",
+        body: "When everything feels important, it’s hard to know where to begin. A simple way to see your priorities can help make the day feel a little more manageable.",
+        step: "At the start of tomorrow, choose three things that would make the day feel successful. Put the first one on your calendar before opening your inbox."
+      },
+      "Organizing client information": {
+        title: "The Calm Organizer",
+        body: "You value having the right information where you can find it. A consistent home for client notes and next steps can make follow-through feel much easier.",
+        step: "Choose one place to keep client notes. Add the same three details for each person: last contact, next step, and when to follow up."
+      },
+      "Creating a better follow-up system": {
+        title: "The Follow-through Builder",
+        body: "You know good relationships grow through thoughtful follow-up. A light, dependable reminder system can help you stay in touch without relying on memory alone.",
+        step: "After your next client conversation, add one follow-up reminder with a date and a short note about what would be helpful to them."
+      },
+      other: {
+        title: "The Thoughtful Tinkerer",
+        body: "You have a clear sense of what could work better, even if it doesn’t fit a standard category. Start with what’s already getting in your way and make one change you can actually sustain.",
+        step: "Describe the improvement you want in one sentence, then choose the smallest action you can take this week to move toward it."
+      }
+    };
+
+    const answers = {};
+    let currentQuestion = 0;
+    const sections = {
+      intro: document.getElementById("step-intro"),
+      quiz: document.getElementById("step-quiz"),
+      contact: document.getElementById("step-contact"),
+      result: document.getElementById("step-result")
+    };
+
+    function showSection(name, focusId) {
+      Object.entries(sections).forEach(([key, element]) => {
+        element.classList.toggle("hidden", key !== name);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (focusId) document.getElementById(focusId).focus({ preventScroll: true });
+    }
+
+    function responseFor(question) {
+      return answers[question.id] || { values: [], other: "" };
+    }
+
+    function renderQuestion() {
+      const question = QUESTIONS[currentQuestion];
+      const saved = responseFor(question);
+      const optionContainer = document.getElementById("options");
+      document.getElementById("question-count").textContent = "Question " + (currentQuestion + 1) + " of " + QUESTIONS.length;
+      document.getElementById("question-kind").textContent = question.kind === "checkbox" ? "Choose any that fit" : "Choose one";
+      document.getElementById("question-title").textContent = question.title;
+      document.getElementById("question-hint").textContent = question.hint;
+      document.getElementById("progress-track").setAttribute("aria-valuenow", String(currentQuestion + 1));
+      document.getElementById("progress-fill").style.width = ((currentQuestion + 1) / QUESTIONS.length * 100) + "%";
+      document.getElementById("question-error").textContent = "";
+      optionContainer.replaceChildren();
+
+      question.options.forEach((labelText, index) => {
+        const id = question.id + "-" + index;
+        const wrapper = document.createElement("div");
+        const input = document.createElement("input");
+        const label = document.createElement("label");
+        const indicator = document.createElement("span");
+        const text = document.createElement("span");
+        wrapper.className = "relative";
+        input.type = question.kind;
+        input.name = question.id;
+        input.id = id;
+        input.value = labelText;
+        input.checked = saved.values.includes(labelText);
+        input.className = "peer sr-only";
+        label.htmlFor = id;
+        label.className = "flex min-h-14 cursor-pointer items-center gap-3 rounded-xl border border-forest-950/10 bg-white p-4 text-sm leading-6 text-ink-700 transition hover:border-forest-700/40 hover:bg-cream-50 peer-checked:border-forest-700 peer-checked:bg-sage-100/70 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-forest-700";
+        indicator.className = "choice-indicator grid h-5 w-5 shrink-0 place-items-center rounded-full border border-forest-950/20 text-[10px] font-bold text-transparent transition";
+        indicator.setAttribute("aria-hidden", "true");
+        indicator.textContent = question.kind === "checkbox" ? "✓" : "";
+        text.textContent = labelText;
+        input.addEventListener("change", () => updateAnswer(question, input));
+        label.append(indicator, text);
+        wrapper.append(input, label);
+        optionContainer.appendChild(wrapper);
+      });
+
+      if (question.other) {
+        const otherId = question.id + "-other";
+        const otherOption = document.createElement("div");
+        otherOption.className = "relative";
+        const input = document.createElement("input");
+        input.type = question.kind;
+        input.name = question.id;
+        input.id = otherId;
+        input.value = "__other__";
+        input.checked = saved.values.includes("__other__");
+        input.className = "peer sr-only";
+        const label = document.createElement("label");
+        label.htmlFor = otherId;
+        label.className = "flex min-h-14 cursor-pointer items-center gap-3 rounded-xl border border-forest-950/10 bg-white p-4 text-sm leading-6 text-ink-700 transition hover:border-forest-700/40 hover:bg-cream-50 peer-checked:border-forest-700 peer-checked:bg-sage-100/70 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-forest-700";
+        const indicator = document.createElement("span");
+        indicator.className = "choice-indicator grid h-5 w-5 shrink-0 place-items-center rounded-full border border-forest-950/20 text-[10px] font-bold text-transparent transition";
+        indicator.setAttribute("aria-hidden", "true");
+        indicator.textContent = question.kind === "checkbox" ? "✓" : "";
+        const labelText = document.createElement("span");
+        labelText.textContent = "Something else";
+        label.append(indicator, labelText);
+        input.addEventListener("change", () => updateAnswer(question, input));
+
+        const otherText = document.createElement("input");
+        otherText.type = "text";
+        otherText.value = saved.other;
+        otherText.maxLength = 120;
+        otherText.setAttribute("aria-label", "Your other " + question.title.toLowerCase() + " response");
+        otherText.placeholder = "Tell us a little more";
+        otherText.className = "mt-2 min-h-11 w-full rounded-xl border border-forest-950/15 bg-cream-50 px-4 py-2.5 text-sm text-forest-950 placeholder:text-ink-400 focus:border-forest-700 focus:outline-none focus:ring-2 focus:ring-forest-700/15";
+        otherText.addEventListener("input", () => {
+          const answer = responseFor(question);
+          answer.other = otherText.value.trim();
+          answers[question.id] = answer;
+        });
+        otherOption.append(input, label, otherText);
+        optionContainer.appendChild(otherOption);
+      }
+      document.getElementById("next").querySelector("span").textContent = currentQuestion === QUESTIONS.length - 1 ? "Continue" : "Next question";
+    }
+
+    function updateAnswer(question, changedInput) {
+      const previous = responseFor(question);
+      let values;
+      if (question.kind === "checkbox") {
+        values = changedInput.checked
+          ? [...previous.values, changedInput.value]
+          : previous.values.filter(value => value !== changedInput.value);
+      } else {
+        values = [changedInput.value];
+      }
+      answers[question.id] = { values, other: previous.other };
+      if (question.kind === "checkbox") {
+        document.querySelectorAll('input[name="' + question.id + '"]').forEach(input => {
+          input.checked = values.includes(input.value);
+        });
+      }
+    }
+
+    function humanAnswer(question) {
+      const answer = responseFor(question);
+      const values = answer.values.map(value => value === "__other__" ? answer.other : value).filter(Boolean);
+      return values.join(", ") || "Not provided";
+    }
+
+    function createGoogleFormUrl() {
+      const url = new URL(FORM_URL);
+      url.searchParams.set("usp", "pp_url");
+      url.searchParams.set(FORM_FIELDS.privacyConsent, "Yes, I have read and agree to the Privacy Notice.");
+      url.searchParams.set(FORM_FIELDS.fullName, document.getElementById("name").value.trim());
+      url.searchParams.set(FORM_FIELDS.email, document.getElementById("email").value.trim());
+      url.searchParams.set("emailAddress", document.getElementById("email").value.trim());
+
+      QUESTIONS.forEach(question => {
+        const answer = responseFor(question);
+        answer.values.forEach(value => {
+          if (value === "__other__") {
+            url.searchParams.append(FORM_FIELDS[question.id], "__other_option__");
+            url.searchParams.append(FORM_FIELDS[question.id] + ".other_option_response", answer.other);
+          } else {
+            url.searchParams.append(FORM_FIELDS[question.id], value);
+          }
+        });
+      });
+      return url.toString();
+    }
+
+    function renderResult() {
+      const recommendation = responseFor(QUESTIONS[2]);
+      const chosenImprovement = recommendation.values[0] === "__other__" ? "other" : recommendation.values[0];
+      const result = RESULTS[chosenImprovement] || RESULTS.other;
+      const name = document.getElementById("name").value.trim();
+      document.getElementById("result-name").textContent = name ? name + "’s " : "";
+      document.getElementById("result-kicker").textContent = name ? "workflow snapshot" : "Your workflow snapshot";
+      document.getElementById("result-title").textContent = result.title;
+      document.getElementById("result-body").textContent = result.body;
+      document.getElementById("result-step").textContent = result.step;
+      document.getElementById("result-challenge").textContent = humanAnswer(QUESTIONS[0]);
+      document.getElementById("result-priority").textContent = humanAnswer(QUESTIONS[2]);
+      document.getElementById("google-form-link").href = createGoogleFormUrl();
+    }
+
+    document.getElementById("start").addEventListener("click", () => {
+      currentQuestion = 0;
+      renderQuestion();
+      showSection("quiz", "question-title");
+    });
+    document.getElementById("back").addEventListener("click", () => {
+      if (currentQuestion === 0) {
+        showSection("intro", "intro-title");
+        return;
+      }
+      currentQuestion -= 1;
+      renderQuestion();
+      showSection("quiz", "question-title");
+    });
+    document.getElementById("next").addEventListener("click", () => {
+      const question = QUESTIONS[currentQuestion];
+      const answer = responseFor(question);
+      if (!answer.values.length || (answer.values.includes("__other__") && !answer.other.trim())) {
+        document.getElementById("question-error").textContent = answer.values.includes("__other__")
+          ? "Please add a short note for your answer."
+          : "Choose at least one answer to continue.";
+        return;
+      }
+      if (currentQuestion < QUESTIONS.length - 1) {
+        currentQuestion += 1;
+        renderQuestion();
+        showSection("quiz", "question-title");
+      } else {
+        showSection("contact", "contact-title");
+      }
+    });
+    document.getElementById("contact-back").addEventListener("click", () => {
+      currentQuestion = QUESTIONS.length - 1;
+      renderQuestion();
+      showSection("quiz", "question-title");
+    });
+    document.getElementById("contact-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const error = document.getElementById("contact-error");
+      error.textContent = "";
+      if (!name.value.trim()) {
+        error.textContent = "Please enter your name.";
+        name.focus();
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        error.textContent = "Please enter a valid email address.";
+        email.focus();
+        return;
+      }
+      if (!document.getElementById("consent").checked) {
+        error.textContent = "Please confirm that you agree to the Privacy Notice before continuing.";
+        document.getElementById("consent").focus();
+        return;
+      }
+      renderResult();
+      showSection("result", "result-title");
+    });
+    document.getElementById("retake").addEventListener("click", () => {
+      Object.keys(answers).forEach(key => delete answers[key]);
+      currentQuestion = 0;
+      document.getElementById("contact-form").reset();
+      renderQuestion();
+      showSection("intro", "intro-title");
+    });
+  </script>
+</body>
+</html>
